@@ -12,6 +12,7 @@
 		B3DDD45B294FF43500602148 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DDD45A294FF43500602148 /* ContentView.swift */; };
 		B3DDD45D294FF43600602148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDD45C294FF43600602148 /* Assets.xcassets */; };
 		B3DDD460294FF43600602148 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DDD45F294FF43600602148 /* Preview Assets.xcassets */; };
+		B3DDD46E294FF56A00602148 /* WatchMeServ in Frameworks */ = {isa = PBXBuildFile; productRef = B3DDD46D294FF56A00602148 /* WatchMeServ */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		B3DDD45A294FF43500602148 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B3DDD45C294FF43600602148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3DDD45F294FF43600602148 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3DDD46A294FF4BB00602148 /* WatchMeServ */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = WatchMeServ; path = Packages/WatchMeServ; sourceTree = "<group>"; };
+		B3DDD46B294FF56400602148 /* WatchMe-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "WatchMe-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DDD46E294FF56A00602148 /* WatchMeServ in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,8 +65,10 @@
 		B3DDD446294FF43400602148 = {
 			isa = PBXGroup;
 			children = (
+				B3DDD46A294FF4BB00602148 /* WatchMeServ */,
 				B3DDD457294FF43500602148 /* WatchMe Watch App */,
 				B3DDD44E294FF43500602148 /* Products */,
+				B3DDD46C294FF56A00602148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +84,7 @@
 		B3DDD457294FF43500602148 /* WatchMe Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				B3DDD46B294FF56400602148 /* WatchMe-Watch-App-Info.plist */,
 				B3DDD458294FF43500602148 /* WatchMeApp.swift */,
 				B3DDD45A294FF43500602148 /* ContentView.swift */,
 				B3DDD45C294FF43600602148 /* Assets.xcassets */,
@@ -92,6 +99,13 @@
 				B3DDD45F294FF43600602148 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3DDD46C294FF56A00602148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +141,9 @@
 			dependencies = (
 			);
 			name = "WatchMe Watch App";
+			packageProductDependencies = (
+				B3DDD46D294FF56A00602148 /* WatchMeServ */,
+			);
 			productName = "WatchMe Watch App";
 			productReference = B3DDD453294FF43500602148 /* WatchMe Watch App.app */;
 			productType = "com.apple.product-type.application";
@@ -328,6 +345,7 @@
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchMe;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -343,7 +361,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Debug;
 		};
@@ -358,6 +376,7 @@
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchMe-Watch-App-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = WatchMe;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKWatchOnly = YES;
@@ -374,7 +393,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
 			};
 			name = Release;
 		};
@@ -442,6 +461,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B3DDD46D294FF56A00602148 /* WatchMeServ */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = WatchMeServ;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3DDD447294FF43400602148 /* Project object */;
 }
